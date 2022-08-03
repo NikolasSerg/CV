@@ -5,31 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
     <style>
+        body {
+            font-size: 22px;
+            display: flex;
+            justify-content: center;
+        }
         .container {
+            padding: 1rem;
+            max-width: 1250px;
             background-color: rgb(224, 217, 217);
+        }
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .inform {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .inform-user {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .inform-user-table {
+            line-height: 35px;
+            border-spacing: 25px 10px;
+            border-collapse: separate;
+        }
+        .inform-user-table th, .inform-user-table td {
+            text-align: start;
+        }
+        .avatar {
+            padding: 25px;
+        }
+        .skills {
+            width: 100%;
+        }
+        .skills table, .skills th {
+            border: 2px solid #686868;
+            background: #c3c1c1;
+        }
+        @media print {
+            @page  {
+                size: A4;
+                margin: 0mm;
+            }
+            body {
+                font-size: 16px;
+            }
+            .inform-user-table {
+                line-height: 18px;
+                border-spacing: 15px 5px;
+                border-collapse: separate;
+            }
+            .avatar img {
+                width: 150px;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
-        <div class="container mt-3 p-5">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h1>Nikolaychuk Sergey</h1>
-                </div>
-                <div class="col-12">
+        <div class="container">
+            <div class="title">
+                    <h1>Nikolaichuk Serhii</h1>
                     <h3>Front-end developer</h3>
-                </div>
             </div>
-            <div class="row info fs-5">
-                <div class="col-md-6 d-flex justify-content-center order-md-1">
-                    <figure class="figure col-md-6 ">
-                        <img src="img/foto.jpg" alt="foto">
-                    </figure>
-                </div>
-                <div class="col-md-6 align-items-center order-md-0">
-                    <table class="table">
+            <div class="inform">
+                <div class="inform-user">
+                    <table class="inform-user-table">
                         <tr>
                             <th>Email:</th>
                             <td><a href="mailto:nikolasalon@gmail.com">nikolasalon@gmail.com</a></td>
@@ -64,12 +112,14 @@
                         </tr>
                     </table>
                 </div>
-                
+                <div class="avatar" >
+                    <img src="img/foto.jpg" alt="foto">
+                </div>
             </div>
             <br>
             <br>
-            <div class="skills mt-5">
-                <table class="table fs-5 lh-lg">
+            <div>
+                <table class="skills">
                     <tr class="table-dark">
                         <th >SKILLS</th>
                     </tr>
@@ -77,12 +127,11 @@
                         <td>
                             <ul>
                                 <li>HTML, handlebars, pug, ejs</li>
-                                <li>CSS, sass/scss, bootstrap, materialize css</li>
-                                <li>JAVASCRIPT, react, redux, redux-thunk</li>
+                                <li>CSS, sass/scss, bootstrap, materialize css, mui</li>
+                                <li>JAVASCRIPT, react, redux</li>
                                 <li>NODE, express.js</li>
-                                <li>DB: mongoDb, mySQL</li>
+                                <li>DB: mongoDb</li>
                                 <li>git, github</li>
-                                <li>webpack, Gulp,handelbars</li>
                                 <li>jenkins</li>
                             </ul>
                         </td>
@@ -92,20 +141,19 @@
                     </tr>
                     <tr>
                         <td>
-                            04.2018 - 04.2019 IT Academy "STEP" Rivne (Front-end Developer)
-                            09.2003 - 06.2006 European University Rivne (master, economics of production)
+                            <ul>
+                                <li>08.2021 - 10.2021 SoftServe WEB UI Club </li>
+                                <li>04.2018 - 04.2019 IT Academy "STEP" Rivne (Front-end Developer)</li>
+                                <li>09.2003 - 06.2006 European University Rivne (master, economics of production)</li>
+                                <ul>PORTALS:
+                                    <li>ITDVN</li>
+                                    <li>UDEMY</li>
+                                    <li>Coursehunter</li>
+                                </ul>
+
+                            </ul>
                         </td>
                     </tr>
-                   <tr> 
-                       <td>
-                           ITDVN
-                       </td>
-                    </tr>
-                    <tr> 
-                        <td>
-                            SoftServe WEB UI Club
-                        </td>
-                     </tr>
                     <tr class="table-dark">
                         <th>LANGUAGES</th>
                     </tr>
@@ -113,7 +161,6 @@
                         <td>
                             <ul>
                                 <li>Ukrainian language - Native</li>
-                                <li>Russian language - Excellent</li>
                                 <li>English language - Intermediate</li>
                             </ul>
                         </td>
